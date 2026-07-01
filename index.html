@@ -31,6 +31,7 @@
         <li><a href="#sobre" class="hover:text-orange-500 transition-colors">Sobre</a></li>
         <li><a href="#servicos" class="hover:text-orange-500 transition-colors">Serviços</a></li>
         <li><a href="#galeria" class="hover:text-orange-500 transition-colors">Galeria</a></li>
+        <!-- Link direto para o WhatsApp: troque o número em wa.me/ se mudar de telefone -->
         <li>
           <a href="https://wa.me/5511973534839" target="_blank" rel="noopener"
              class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-full font-semibold transition-colors">
@@ -39,7 +40,7 @@
         </li>
       </ul>
 
-      <!-- Botão menu mobile -->
+      <!-- Botão menu mobile: só aparece em telas pequenas (md:hidden), abre/fecha o menu abaixo -->
       <button id="menu-btn" class="md:hidden text-white" aria-label="Abrir menu">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -47,7 +48,7 @@
       </button>
     </nav>
 
-    <!-- Menu mobile -->
+    <!-- Menu mobile: fica escondido (classe "hidden") até o botão acima ser clicado -->
     <div id="mobile-menu" class="hidden md:hidden bg-slate-900 px-5 pb-5">
       <ul class="flex flex-col gap-4 text-slate-200 font-medium">
         <li><a href="#sobre" class="block hover:text-orange-500">Sobre</a></li>
@@ -64,8 +65,10 @@
   </header>
 
   <!-- ===================== HERO ===================== -->
+  <!-- Primeira seção vista ao abrir o site. hero-bg (definida em style.css) dá o fundo gradiente escuro. -->
   <section id="hero" class="hero-bg min-h-screen flex items-center justify-center text-center pt-24 px-5">
     <div class="max-w-3xl mx-auto">
+      <!-- Selo de destaque acima do título -->
       <span class="inline-block bg-orange-500/90 text-white text-sm font-semibold uppercase tracking-wider px-4 py-1 rounded-full mb-6">
         Pintura Residencial &amp; Comercial
       </span>
@@ -78,9 +81,11 @@
       <p class="text-slate-300 mb-10 max-w-xl mx-auto">
         Qualidade, capricho e pontualidade em cada trabalho. Peça já o seu orçamento sem compromisso.
       </p>
+      <!-- Botão CTA principal: abre o WhatsApp já com uma mensagem pronta (texto após "?text=") -->
       <a href="https://wa.me/5511973534839?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento."
          target="_blank" rel="noopener"
          class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white text-lg font-bold px-8 py-4 rounded-full shadow-lg shadow-green-500/30 transition-transform hover:scale-105">
+        <!-- Ícone do WhatsApp (SVG) -->
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6 fill-current">
           <path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.12-2.9-6.98A9.82 9.82 0 0 0 12.04 2zm0 18.1h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.55-3.7 8.24-8.25 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.4-.12-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.73-.66-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.87.86-.87 2.09 0 1.23.9 2.42 1.02 2.59.12.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/>
         </svg>
@@ -110,6 +115,7 @@
           resultado duradouro e profissional.
         </p>
 
+        <!-- Estatísticas rápidas (3 números lado a lado). Edite os textos "15+", "150+" etc. aqui. -->
         <div class="grid grid-cols-3 gap-4 text-center">
           <div>
             <p class="text-3xl font-extrabold text-slate-900">15+</p>
@@ -126,6 +132,7 @@
         </div>
       </div>
 
+      <!-- Foto de perfil (aspect-[4/5] = proporção vertical 4:5). Arquivo em img/perfil.jpg -->
       <div class="order-1 md:order-2">
         <img src="img/perfil.jpg" alt="Genivaldo Martins Santos"
              class="rounded-2xl shadow-xl w-full object-cover aspect-[4/5]" />
@@ -143,6 +150,8 @@
         </h2>
       </div>
 
+      <!-- Grade de cards de serviços: cada <div> abaixo é 1 card (ícone + título + descrição). -->
+      <!-- Para adicionar um novo serviço, copie um card inteiro e cole antes do fechamento </div> da grade. -->
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Card 1 -->
         <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow border border-slate-100">
@@ -195,17 +204,23 @@
         <p class="text-slate-600 mt-3">Confira alguns exemplos de antes e depois dos nossos serviços.</p>
       </div>
 
+      <!--
+        Cada card abaixo = 1 trabalho, com 2 fotos lado a lado (Antes / Depois).
+        A classe "gallery-img" é o que faz a foto abrir em tela cheia ao clicar
+        (o comportamento do clique está no <script> no fim da página, seção "Lightbox da galeria").
+        Para trocar as fotos, só troque o caminho no atributo src="img/....jpg".
+      -->
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <!-- Trabalho 1 -->
         <div class="bg-slate-50 rounded-2xl p-3 border border-slate-100 shadow-sm hover:shadow-lg transition-shadow">
           <div class="grid grid-cols-2 gap-2">
             <div class="relative overflow-hidden rounded-lg">
-              <img src="img/trabalho1_antes.jpg" alt="Antes - trabalho 1" class="w-full h-40 sm:h-48 object-cover" />
+              <img src="img/trabalho1_antes.jpg" alt="Antes - trabalho 1" class="gallery-img w-full h-40 sm:h-48 object-cover cursor-zoom-in transition-transform duration-300 hover:scale-105" />
               <span class="absolute top-2 left-2 bg-slate-900/85 text-white text-[11px] font-bold uppercase tracking-wide px-2 py-1 rounded">Antes</span>
             </div>
             <div class="relative overflow-hidden rounded-lg">
-              <img src="img/trabalho1_depois.jpg" alt="Depois - trabalho 1" class="w-full h-40 sm:h-48 object-cover" />
+              <img src="img/trabalho1_depois.jpg" alt="Depois - trabalho 1" class="gallery-img w-full h-40 sm:h-48 object-cover cursor-zoom-in transition-transform duration-300 hover:scale-105" />
               <span class="absolute top-2 left-2 bg-orange-500/90 text-white text-[11px] font-bold uppercase tracking-wide px-2 py-1 rounded">Depois</span>
             </div>
           </div>
@@ -216,11 +231,11 @@
         <div class="bg-slate-50 rounded-2xl p-3 border border-slate-100 shadow-sm hover:shadow-lg transition-shadow">
           <div class="grid grid-cols-2 gap-2">
             <div class="relative overflow-hidden rounded-lg">
-              <img src="img/trabalho2_antes.jpg" alt="Antes - trabalho 2" class="w-full h-40 sm:h-48 object-cover" />
+              <img src="img/trabalho2_antes.jpg" alt="Antes - trabalho 2" class="gallery-img w-full h-40 sm:h-48 object-cover cursor-zoom-in transition-transform duration-300 hover:scale-105" />
               <span class="absolute top-2 left-2 bg-slate-900/85 text-white text-[11px] font-bold uppercase tracking-wide px-2 py-1 rounded">Antes</span>
             </div>
             <div class="relative overflow-hidden rounded-lg">
-              <img src="img/trabalho2_depois.jpg" alt="Depois - trabalho 2" class="w-full h-40 sm:h-48 object-cover" />
+              <img src="img/trabalho2_depois.jpg" alt="Depois - trabalho 2" class="gallery-img w-full h-40 sm:h-48 object-cover cursor-zoom-in transition-transform duration-300 hover:scale-105" />
               <span class="absolute top-2 left-2 bg-orange-500/90 text-white text-[11px] font-bold uppercase tracking-wide px-2 py-1 rounded">Depois</span>
             </div>
           </div>
@@ -231,11 +246,11 @@
         <div class="bg-slate-50 rounded-2xl p-3 border border-slate-100 shadow-sm hover:shadow-lg transition-shadow">
           <div class="grid grid-cols-2 gap-2">
             <div class="relative overflow-hidden rounded-lg">
-              <img src="img/trabalho3_antes.jpg" alt="Antes - trabalho 3" class="w-full h-40 sm:h-48 object-cover" />
+              <img src="img/trabalho3_antes.jpg" alt="Antes - trabalho 3" class="gallery-img w-full h-40 sm:h-48 object-cover cursor-zoom-in transition-transform duration-300 hover:scale-105" />
               <span class="absolute top-2 left-2 bg-slate-900/85 text-white text-[11px] font-bold uppercase tracking-wide px-2 py-1 rounded">Antes</span>
             </div>
             <div class="relative overflow-hidden rounded-lg">
-              <img src="img/trabalho3_depois.jpg" alt="Depois - trabalho 3" class="w-full h-40 sm:h-48 object-cover" />
+              <img src="img/trabalho3_depois.jpg" alt="Depois - trabalho 3" class="gallery-img w-full h-40 sm:h-48 object-cover cursor-zoom-in transition-transform duration-300 hover:scale-105" />
               <span class="absolute top-2 left-2 bg-orange-500/90 text-white text-[11px] font-bold uppercase tracking-wide px-2 py-1 rounded">Depois</span>
             </div>
           </div>
@@ -246,11 +261,11 @@
         <div class="bg-slate-50 rounded-2xl p-3 border border-slate-100 shadow-sm hover:shadow-lg transition-shadow">
           <div class="grid grid-cols-2 gap-2">
             <div class="relative overflow-hidden rounded-lg">
-              <img src="img/trabalho4_antes.jpg" alt="Antes - trabalho 4" class="w-full h-40 sm:h-48 object-cover" />
+              <img src="img/trabalho4_antes.jpg" alt="Antes - trabalho 4" class="gallery-img w-full h-40 sm:h-48 object-cover cursor-zoom-in transition-transform duration-300 hover:scale-105" />
               <span class="absolute top-2 left-2 bg-slate-900/85 text-white text-[11px] font-bold uppercase tracking-wide px-2 py-1 rounded">Antes</span>
             </div>
             <div class="relative overflow-hidden rounded-lg">
-              <img src="img/trabalho4_depois.jpg" alt="Depois - trabalho 4" class="w-full h-40 sm:h-48 object-cover" />
+              <img src="img/trabalho4_depois.jpg" alt="Depois - trabalho 4" class="gallery-img w-full h-40 sm:h-48 object-cover cursor-zoom-in transition-transform duration-300 hover:scale-105" />
               <span class="absolute top-2 left-2 bg-orange-500/90 text-white text-[11px] font-bold uppercase tracking-wide px-2 py-1 rounded">Depois</span>
             </div>
           </div>
@@ -261,11 +276,11 @@
         <div class="bg-slate-50 rounded-2xl p-3 border border-slate-100 shadow-sm hover:shadow-lg transition-shadow">
           <div class="grid grid-cols-2 gap-2">
             <div class="relative overflow-hidden rounded-lg">
-              <img src="img/trabalho5_antes.jpg" alt="Antes - trabalho 5" class="w-full h-40 sm:h-48 object-cover" />
+              <img src="img/trabalho5_antes.jpg" alt="Antes - trabalho 5" class="gallery-img w-full h-40 sm:h-48 object-cover cursor-zoom-in transition-transform duration-300 hover:scale-105" />
               <span class="absolute top-2 left-2 bg-slate-900/85 text-white text-[11px] font-bold uppercase tracking-wide px-2 py-1 rounded">Antes</span>
             </div>
             <div class="relative overflow-hidden rounded-lg">
-              <img src="img/trabalho5_depois.jpg" alt="Depois - trabalho 5" class="w-full h-40 sm:h-48 object-cover" />
+              <img src="img/trabalho5_depois.jpg" alt="Depois - trabalho 5" class="gallery-img w-full h-40 sm:h-48 object-cover cursor-zoom-in transition-transform duration-300 hover:scale-105" />
               <span class="absolute top-2 left-2 bg-orange-500/90 text-white text-[11px] font-bold uppercase tracking-wide px-2 py-1 rounded">Depois</span>
             </div>
           </div>
@@ -276,11 +291,11 @@
         <div class="bg-slate-50 rounded-2xl p-3 border border-slate-100 shadow-sm hover:shadow-lg transition-shadow">
           <div class="grid grid-cols-2 gap-2">
             <div class="relative overflow-hidden rounded-lg">
-              <img src="img/trabalho6_antes.jpg" alt="Antes - trabalho 6" class="w-full h-40 sm:h-48 object-cover" />
+              <img src="img/trabalho6_antes.jpg" alt="Antes - trabalho 6" class="gallery-img w-full h-40 sm:h-48 object-cover cursor-zoom-in transition-transform duration-300 hover:scale-105" />
               <span class="absolute top-2 left-2 bg-slate-900/85 text-white text-[11px] font-bold uppercase tracking-wide px-2 py-1 rounded">Antes</span>
             </div>
             <div class="relative overflow-hidden rounded-lg">
-              <img src="img/trabalho6_depois.jpg" alt="Depois - trabalho 6" class="w-full h-40 sm:h-48 object-cover" />
+              <img src="img/trabalho6_depois.jpg" alt="Depois - trabalho 6" class="gallery-img w-full h-40 sm:h-48 object-cover cursor-zoom-in transition-transform duration-300 hover:scale-105" />
               <span class="absolute top-2 left-2 bg-orange-500/90 text-white text-[11px] font-bold uppercase tracking-wide px-2 py-1 rounded">Depois</span>
             </div>
           </div>
@@ -301,6 +316,7 @@
         Fale agora mesmo com Genivaldo Martins Santos e receba seu orçamento sem compromisso.
       </p>
 
+      <!-- Botão CTA final grande, com animação de pulso (.whatsapp-pulse, definida em style.css) para chamar atenção -->
       <a href="https://wa.me/5511973534839?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento."
          target="_blank" rel="noopener"
          class="whatsapp-pulse inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white text-xl font-bold px-10 py-5 rounded-full shadow-lg shadow-green-500/30 transition-transform hover:scale-105">
@@ -316,7 +332,7 @@
     </div>
   </footer>
 
-  <!-- Botão flutuante de WhatsApp -->
+  <!-- Botão flutuante de WhatsApp: fica fixo no canto da tela em todas as seções (posição definida em .whatsapp-float, no style.css) -->
   <a href="https://wa.me/5511973534839?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento."
      target="_blank" rel="noopener" aria-label="Falar no WhatsApp"
      class="whatsapp-float">
@@ -325,19 +341,61 @@
     </svg>
   </a>
 
+  <!-- Lightbox (visualização de imagem em tela cheia) -->
+  <div id="lightbox" class="hidden fixed inset-0 z-[60] bg-black/90 items-center justify-center p-4">
+    <button id="lightbox-close" aria-label="Fechar"
+            class="absolute top-5 right-5 text-white text-4xl leading-none hover:text-orange-500 transition-colors">
+      &times;
+    </button>
+    <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full rounded-lg shadow-2xl" />
+  </div>
+
   <script>
-    // Menu mobile
+    // ===== Menu mobile: abre/fecha o menu ao clicar no ícone de hambúrguer =====
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
+    // Fecha o menu automaticamente quando um link dele é clicado
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
     });
 
-    // Ano atual no rodapé
+    // ===== Ano atual no rodapé: preenche o "©" automaticamente, sem precisar editar todo ano =====
     document.getElementById('ano').textContent = new Date().getFullYear();
+
+    // ===== Lightbox da galeria: abre a foto em tamanho grande ao clicar =====
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    // Para cada foto com a classe "gallery-img" (todas as fotos da galeria), escuta o clique
+    document.querySelectorAll('.gallery-img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;   // copia a imagem clicada para dentro do modal
+        lightboxImg.alt = img.alt;
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+        document.body.classList.add('overflow-hidden'); // trava o scroll da página atrás do modal
+      });
+    });
+
+    // Fecha o modal e limpa a imagem
+    function closeLightbox() {
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+      document.body.classList.remove('overflow-hidden');
+      lightboxImg.src = '';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);      // clique no "X"
+    lightbox.addEventListener('click', (e) => {                  // clique fora da foto (fundo escuro)
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {                // tecla ESC
+      if (e.key === 'Escape') closeLightbox();
+    });
   </script>
 </body>
 </html>

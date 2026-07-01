@@ -1,3 +1,9 @@
+/*
+  Este arquivo só tem os estilos que o Tailwind (via CDN no index.html) não cobre
+  de forma simples: fonte, fundo do Hero, botão flutuante e a animação de pulso.
+  A maior parte do visual do site é controlada pelas classes "class=" no index.html.
+*/
+
 /* ===== Fonte padrão do site ===== */
 body {
   font-family: 'Poppins', sans-serif;
@@ -49,6 +55,8 @@ section[id] {
   animation: pulse-green 2s infinite;
 }
 
+/* Define os 3 momentos da animação de pulso: começa com uma sombra verde visível (0%),
+   expande até sumir (70%), e reinicia (100%) — repete infinitamente. */
 @keyframes pulse-green {
   0% {
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
