@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pinturas Profissionais | Genivaldo Martins Santos</title>
+  <meta name="description" content="Pintura residencial e comercial com qualidade e acabamento profissional. Orçamento rápido pelo WhatsApp." />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Estilos customizados -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-white text-slate-800">
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="fixed top-0 left-0 w-full bg-slate-900/95 backdrop-blur z-50 shadow-md">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-5 py-4">
+      <a href="#hero" class="text-white font-extrabold text-lg tracking-wide">
+        Genivaldo Martins Santos <span class="text-orange-500">Pinturas</span>
+      </a>
+
+      <!-- Links desktop -->
+      <ul class="hidden md:flex items-center gap-8 text-slate-200 font-medium">
+        <li><a href="#sobre" class="hover:text-orange-500 transition-colors">Sobre</a></li>
+        <li><a href="#servicos" class="hover:text-orange-500 transition-colors">Serviços</a></li>
+        <li><a href="#galeria" class="hover:text-orange-500 transition-colors">Galeria</a></li>
+        <li>
+          <a href="https://wa.me/5511973534839" target="_blank" rel="noopener"
+             class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-full font-semibold transition-colors">
+            Orçamento
+          </a>
+        </li>
+      </ul>
+
+      <!-- Botão menu mobile -->
+      <button id="menu-btn" class="md:hidden text-white" aria-label="Abrir menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-900 px-5 pb-5">
+      <ul class="flex flex-col gap-4 text-slate-200 font-medium">
+        <li><a href="#sobre" class="block hover:text-orange-500">Sobre</a></li>
+        <li><a href="#servicos" class="block hover:text-orange-500">Serviços</a></li>
+        <li><a href="#galeria" class="block hover:text-orange-500">Galeria</a></li>
+        <li>
+          <a href="https://wa.me/5511973534839" target="_blank" rel="noopener"
+             class="block text-center bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-full font-semibold">
+            Orçamento
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero" class="hero-bg min-h-screen flex items-center justify-center text-center pt-24 px-5">
+    <div class="max-w-3xl mx-auto">
+      <span class="inline-block bg-orange-500/90 text-white text-sm font-semibold uppercase tracking-wider px-4 py-1 rounded-full mb-6">
+        Pintura Residencial &amp; Comercial
+      </span>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+        Transformando paredes em <span class="text-orange-500">novos ambientes</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-slate-200 mb-2 font-medium">
+        Genivaldo Martins Santos
+      </p>
+      <p class="text-slate-300 mb-10 max-w-xl mx-auto">
+        Qualidade, capricho e pontualidade em cada trabalho. Peça já o seu orçamento sem compromisso.
+      </p>
+      <a href="https://wa.me/5511973534839?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento."
+         target="_blank" rel="noopener"
+         class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white text-lg font-bold px-8 py-4 rounded-full shadow-lg shadow-green-500/30 transition-transform hover:scale-105">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+          <path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.12-2.9-6.98A9.82 9.82 0 0 0 12.04 2zm0 18.1h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.55-3.7 8.24-8.25 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.4-.12-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.73-.66-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.87.86-.87 2.09 0 1.23.9 2.42 1.02 2.59.12.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/>
+        </svg>
+        Peça seu orçamento
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== SOBRE MIM ===================== -->
+  <section id="sobre" class="py-20 px-5 bg-white">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div class="order-2 md:order-1">
+        <span class="text-orange-500 font-semibold uppercase tracking-wider text-sm">Sobre mim</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 mb-6">
+          Anos de experiência dedicados à pintura de qualidade
+        </h2>
+        <p class="text-slate-600 mb-4 leading-relaxed">
+          Meu nome é <strong>Genivaldo Martins Santos</strong> e trabalho com pintura profissional há
+          <strong>mais de 15 anos</strong>, atendendo clientes residenciais e comerciais em
+          São Paulo e na Grande São Paulo. Ao longo da minha trajetória, já realizei projetos de pintura interna,
+          externa, texturização e acabamentos especiais, sempre priorizando capricho, organização
+          e o cuidado com cada detalhe.
+        </p>
+        <p class="text-slate-600 mb-8 leading-relaxed">
+          Acredito que uma pintura bem-feita vai além da estética: ela protege o imóvel e valoriza
+          o ambiente. Por isso, uso materiais de qualidade e técnicas atualizadas para entregar um
+          resultado duradouro e profissional.
+        </p>
+
+        <div class="grid grid-cols-3 gap-4 text-center">
+          <div>
+            <p class="text-3xl font-extrabold text-slate-900">15+</p>
+            <p class="text-sm text-slate-500">Anos de experiência</p>
+          </div>
+          <div>
+            <p class="text-3xl font-extrabold text-slate-900">150+</p>
+            <p class="text-sm text-slate-500">Obras concluídas</p>
+          </div>
+          <div>
+            <p class="text-3xl font-extrabold text-slate-900">100%</p>
+            <p class="text-sm text-slate-500">Compromisso</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-1 md:order-2">
+        <img src="img/perfil.jpg" alt="Genivaldo Martins Santos"
+             class="rounded-2xl shadow-xl w-full object-cover aspect-[4/5]" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVIÇOS ===================== -->
+  <section id="servicos" class="py-20 px-5 bg-slate-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-orange-500 font-semibold uppercase tracking-wider text-sm">Serviços</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">
+          Soluções completas em pintura
+        </h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow border border-slate-100">
+          <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-orange-100 text-3xl mb-5">🏠</div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Pintura Interna</h3>
+          <p class="text-slate-600">Paredes, tetos e ambientes internos com acabamento liso e uniforme.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow border border-slate-100">
+          <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-orange-100 text-3xl mb-5">🏢</div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Pintura Externa</h3>
+          <p class="text-slate-600">Fachadas residenciais e comerciais com tintas resistentes ao tempo.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow border border-slate-100">
+          <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-orange-100 text-3xl mb-5">🧱</div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Aplicação de Textura</h3>
+          <p class="text-slate-600">Texturas decorativas para dar um toque especial e moderno ao ambiente.</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow border border-slate-100">
+          <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-orange-100 text-3xl mb-5">🛠️</div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Reparos e Preparação</h3>
+          <p class="text-slate-600">Correção de trincas, lixamento e preparação de superfícies antes da pintura.</p>
+        </div>
+        <!-- Card 5 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow border border-slate-100">
+          <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-orange-100 text-3xl mb-5">🎨</div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Consultoria de Cores</h3>
+          <p class="text-slate-600">Ajuda na escolha das cores ideais para valorizar cada ambiente.</p>
+        </div>
+        <!-- Card 6 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow border border-slate-100">
+          <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-orange-100 text-3xl mb-5">✨</div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Verniz e Impermeabilização</h3>
+          <p class="text-slate-600">Proteção extra para madeiras, lajes e áreas expostas à umidade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GALERIA DE TRABALHOS ===================== -->
+  <section id="galeria" class="py-20 px-5 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-orange-500 font-semibold uppercase tracking-wider text-sm">Galeria</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">
+          Trabalhos realizados
+        </h2>
+        <p class="text-slate-600 mt-3">Confira alguns exemplos de antes e depois dos nossos serviços.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Trabalho 1 -->
+        <div class="bg-slate-50 rounded-2xl p-3 border border-slate-100 shadow-sm hover:shadow-lg transition-shadow">
+          <div class="grid grid-cols-2 gap-2">
+            <div class="relative overflow-hidden rounded-lg">
+              <img src="img/trabalho1_antes.jpg" alt="Antes - trabalho 1" class="w-full h-40 sm:h-48 object-cover" />
+              <span class="absolute top-2 left-2 bg-slate-900/85 text-white text-[11px] font-bold uppercase tracking-wide px-2 py-1 rounded">Antes</span>
+            </div>
+            <div class="relative overflow-hidden rounded-lg">
+              <img src="img/trabalho1_depois.jpg" alt="Depois - trabalho 1" class="w-full h-40 sm:h-48 object-cover" />
+              <span class="absolute top-2 left-2 bg-orange-500/90 text-white text-[11px] font-bold uppercase tracking-wide px-2 py-1 rounded">Depois</span>
+            </div>
+          </div>
+          <p class="text-center text-slate-500 text-sm mt-2">Trabalho 1</p>
+        </div>
+
+        <!-- Trabalho 2 -->
+        <div class="bg-slate-50 rounded-2xl p-3 border border-slate-100 shadow-sm hover:shadow-lg transition-shadow">
+          <div class="grid grid-cols-2 gap-2">
+            <div class="relative overflow-hidden rounded-lg">
+              <img src="img/trabalho2_antes.jpg" alt="Antes - trabalho 2" class="w-full h-40 sm:h-48 object-cover" />
+              <span class="absolute top-2 left-2 bg-slate-900/85 text-white text-[11px] font-bold uppercase tracking-wide px-2 py-1 rounded">Antes</span>
+            </div>
+            <div class="relative overflow-hidden rounded-lg">
+              <img src="img/trabalho2_depois.jpg" alt="Depois - trabalho 2" class="w-full h-40 sm:h-48 object-cover" />
+              <span class="absolute top-2 left-2 bg-orange-500/90 text-white text-[11px] font-bold uppercase tracking-wide px-2 py-1 rounded">Depois</span>
+            </div>
+          </div>
+          <p class="text-center text-slate-500 text-sm mt-2">Trabalho 2</p>
+        </div>
+
+        <!-- Trabalho 3 -->
+        <div class="bg-slate-50 rounded-2xl p-3 border border-slate-100 shadow-sm hover:shadow-lg transition-shadow">
+          <div class="grid grid-cols-2 gap-2">
+            <div class="relative overflow-hidden rounded-lg">
+              <img src="img/trabalho3_antes.jpg" alt="Antes - trabalho 3" class="w-full h-40 sm:h-48 object-cover" />
+              <span class="absolute top-2 left-2 bg-slate-900/85 text-white text-[11px] font-bold uppercase tracking-wide px-2 py-1 rounded">Antes</span>
+            </div>
+            <div class="relative overflow-hidden rounded-lg">
+              <img src="img/trabalho3_depois.jpg" alt="Depois - trabalho 3" class="w-full h-40 sm:h-48 object-cover" />
+              <span class="absolute top-2 left-2 bg-orange-500/90 text-white text-[11px] font-bold uppercase tracking-wide px-2 py-1 rounded">Depois</span>
+            </div>
+          </div>
+          <p class="text-center text-slate-500 text-sm mt-2">Trabalho 3</p>
+        </div>
+
+        <!-- Trabalho 4 -->
+        <div class="bg-slate-50 rounded-2xl p-3 border border-slate-100 shadow-sm hover:shadow-lg transition-shadow">
+          <div class="grid grid-cols-2 gap-2">
+            <div class="relative overflow-hidden rounded-lg">
+              <img src="img/trabalho4_antes.jpg" alt="Antes - trabalho 4" class="w-full h-40 sm:h-48 object-cover" />
+              <span class="absolute top-2 left-2 bg-slate-900/85 text-white text-[11px] font-bold uppercase tracking-wide px-2 py-1 rounded">Antes</span>
+            </div>
+            <div class="relative overflow-hidden rounded-lg">
+              <img src="img/trabalho4_depois.jpg" alt="Depois - trabalho 4" class="w-full h-40 sm:h-48 object-cover" />
+              <span class="absolute top-2 left-2 bg-orange-500/90 text-white text-[11px] font-bold uppercase tracking-wide px-2 py-1 rounded">Depois</span>
+            </div>
+          </div>
+          <p class="text-center text-slate-500 text-sm mt-2">Trabalho 4</p>
+        </div>
+
+        <!-- Trabalho 5 -->
+        <div class="bg-slate-50 rounded-2xl p-3 border border-slate-100 shadow-sm hover:shadow-lg transition-shadow">
+          <div class="grid grid-cols-2 gap-2">
+            <div class="relative overflow-hidden rounded-lg">
+              <img src="img/trabalho5_antes.jpg" alt="Antes - trabalho 5" class="w-full h-40 sm:h-48 object-cover" />
+              <span class="absolute top-2 left-2 bg-slate-900/85 text-white text-[11px] font-bold uppercase tracking-wide px-2 py-1 rounded">Antes</span>
+            </div>
+            <div class="relative overflow-hidden rounded-lg">
+              <img src="img/trabalho5_depois.jpg" alt="Depois - trabalho 5" class="w-full h-40 sm:h-48 object-cover" />
+              <span class="absolute top-2 left-2 bg-orange-500/90 text-white text-[11px] font-bold uppercase tracking-wide px-2 py-1 rounded">Depois</span>
+            </div>
+          </div>
+          <p class="text-center text-slate-500 text-sm mt-2">Trabalho 5</p>
+        </div>
+
+        <!-- Trabalho 6 -->
+        <div class="bg-slate-50 rounded-2xl p-3 border border-slate-100 shadow-sm hover:shadow-lg transition-shadow">
+          <div class="grid grid-cols-2 gap-2">
+            <div class="relative overflow-hidden rounded-lg">
+              <img src="img/trabalho6_antes.jpg" alt="Antes - trabalho 6" class="w-full h-40 sm:h-48 object-cover" />
+              <span class="absolute top-2 left-2 bg-slate-900/85 text-white text-[11px] font-bold uppercase tracking-wide px-2 py-1 rounded">Antes</span>
+            </div>
+            <div class="relative overflow-hidden rounded-lg">
+              <img src="img/trabalho6_depois.jpg" alt="Depois - trabalho 6" class="w-full h-40 sm:h-48 object-cover" />
+              <span class="absolute top-2 left-2 bg-orange-500/90 text-white text-[11px] font-bold uppercase tracking-wide px-2 py-1 rounded">Depois</span>
+            </div>
+          </div>
+          <p class="text-center text-slate-500 text-sm mt-2">Trabalho 6</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RODAPÉ / CTA FINAL ===================== -->
+  <footer id="contato" class="bg-slate-900 text-white py-16 px-5">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">
+        Pronto para transformar seu espaço?
+      </h2>
+      <p class="text-slate-300 mb-8">
+        Fale agora mesmo com Genivaldo Martins Santos e receba seu orçamento sem compromisso.
+      </p>
+
+      <a href="https://wa.me/5511973534839?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento."
+         target="_blank" rel="noopener"
+         class="whatsapp-pulse inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white text-xl font-bold px-10 py-5 rounded-full shadow-lg shadow-green-500/30 transition-transform hover:scale-105">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-7 w-7 fill-current">
+          <path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.12-2.9-6.98A9.82 9.82 0 0 0 12.04 2zm0 18.1h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.55-3.7 8.24-8.25 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.4-.12-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.73-.66-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.87.86-.87 2.09 0 1.23.9 2.42 1.02 2.59.12.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/>
+        </svg>
+        Chamar no WhatsApp
+      </a>
+
+      <p class="text-slate-500 text-sm mt-10">
+        &copy; <span id="ano"></span> Genivaldo Martins Santos Pinturas. Todos os direitos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante de WhatsApp -->
+  <a href="https://wa.me/5511973534839?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento."
+     target="_blank" rel="noopener" aria-label="Falar no WhatsApp"
+     class="whatsapp-float">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8 fill-current text-white">
+      <path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.44 9.9-9.9 0-2.64-1.03-5.12-2.9-6.98A9.82 9.82 0 0 0 12.04 2zm0 18.1h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.55-3.7 8.24-8.25 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.4-.12-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.73-.66-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.87.86-.87 2.09 0 1.23.9 2.42 1.02 2.59.12.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29z"/>
+    </svg>
+  </a>
+
+  <script>
+    // Menu mobile
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Ano atual no rodapé
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
